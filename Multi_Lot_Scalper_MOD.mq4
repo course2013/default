@@ -312,8 +312,8 @@ int start()
 		         else 
 		             mylotsi=lotsi; 
 		         //----
-           if(mylotsi > 100) 
-		             mylotsi = 100; 
+           if(mylotsi > maxLots) 
+		             mylotsi = maxLots; 
 		         OrderSend(Symbol(), OP_SELL, mylotsi, SellPrice, slippage, sl, tp, NULL, 0, 0, 
 		                   Red);		    		    
 		         return(0);
@@ -348,8 +348,8 @@ int start()
            else 
                mylotsi = lotsi; 
            //----
-           if(mylotsi > 100) 
-               mylotsi = 100; 
+           if(mylotsi > maxLots) 
+               mylotsi = maxLots; 
            OrderSend(Symbol(), OP_BUY, mylotsi, BuyPrice, slippage, sl, tp, NULL, 0, 0, 
                      Blue);		    
            return(0);
